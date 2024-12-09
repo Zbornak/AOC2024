@@ -1,12 +1,17 @@
 # Historian Hysteria
 
-from pathlib import Path
-
 fn main() raises:
     var left_nums = List[Int]()
     var right_nums = List[Int]()
 
     with open("input.txt", "r") as f:
         var content = f.read()
-        print(String("{}").format(content))
+        for line in content.split("\n"):
+            var numbers = line[].split(" ")
+            left_nums.append(atol(numbers[0]))
+            right_nums.append(atol(numbers[1]))
+
+        sort(left_nums)
+        sort(right_nums)
+
 
